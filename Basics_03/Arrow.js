@@ -42,4 +42,3 @@ console.log(addTwo(3, 4));
 const returnObj = (num1, num2) => ({username: "Zaid", Amount: "1000", id: 2457})
 console.log(returnObj(3, 4));
 
-
