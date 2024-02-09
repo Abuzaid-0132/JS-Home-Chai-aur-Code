@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #414141">
+    <h1>Tea with JavaScript.</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let intervalID;
+
+    function startInterval() {
+      intervalID = setInterval(function () {
+        console.log("Interval Startes", Date.now());
+      }, 1000);
+    }
+
+    function stopInterval() {
+      clearInterval(intervalID);
+      console.log("Interval Stopped.");
+    }
+
+    document.querySelector("#start").addEventListener("click", startInterval);
+    document.querySelector("#stop").addEventListener("click", stopInterval);
+  </script>
+</html>
